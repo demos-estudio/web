@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos Estudio | Fotografía Profesional en La Habana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">Demos <span>Estudio</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" data-lang="nav_home">Inicio</a></li>
+                <li><a href="#portafolio" data-lang="nav_portfolio">Portafolio</a></li>
+                <li><a href="#servicios" data-lang="nav_services">Servicios</a></li>
+                <li><a href="#precios" data-lang="nav_pricing">Precios</a></li>
+                <li><a href="#nosotros" data-lang="nav_about">Nosotros</a></li>
+                <li><a href="#contacto" data-lang="nav_contact">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">EN</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <span class="hero-badge" data-lang="hero_badge">Estudio de Fotografía en La Habana</span>
+            <h1 data-lang="hero_title">En el Mundo, tu <span>Marca</span></h1>
+            <p data-lang="hero_subtitle">Te ayudamos a construir tu imagen de marca personal o corporativa para que puedas presentarte como el profesional competente que eres.</p>
+            <div class="hero-cta">
+                <a href="#precios" class="btn btn-primary" data-lang="hero_cta_primary">Ver Precios</a>
+                <a href="#contacto" class="btn btn-secondary" data-lang="hero_cta_secondary">Reservar Sesión</a>
+            </div>
+        </div>
+    </section>
+    
+    <!--Portfolio Section -->
+    <section class="portfolio" id="portafolio">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-lang="portfolio_tag">Nuestro Trabajo</span>
+                <h2 data-lang="portfolio_title">Portafolio</h2>
+                <p data-lang="portfolio_subtitle">Explora nuestra colección de fotografías de marca personal, corporativa,CV y productos.</p>
+            </div>
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all" data-lang="filter_all">Todos</button>
+                <button class="filter-btn" data-filter="marca_personal" data-lang="filter_marca_personal">Marca Personal</button>
+                <button class="filter-btn" data-filter="marca_corporativa" data-lang="filter_marca_corporativa">Marca Corporativa</button>
+                <button class="filter-btn" data-filter="foto_cv" data-lang="filter_foto_cv">Foto CV</button>
+                <button class="filter-btn" data-filter="foto_producto" data-lang="filter_foto_producto">Foto Producto</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal" data-category="marca_personal">
+                    <img src="assets/gallery/1_serv_marca_personal/1_vanessa.webp" alt="Marca Personal" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 data-lang="portfolio_item_1_title">Marca Personal</h3>
+                        <p data-lang="portfolio_item_1_desc">Tu esencia, tu imagen</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-category="marca_personal">
+                    <img src="assets/gallery/1_serv_marca_personal/didi.webp" alt="Marca Personal" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 data-lang="portfolio_item_1b_title">Marca Personal</h3>
+                        <p data-lang="portfolio_item_1b_desc">Autenticidad</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-category="marca_corporativa">
+                    <img src="assets/gallery/2_serv_marca_corporativa/1_cubatango.webp" alt="Marca Corporativa" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 data-lang="portfolio_item_2_title">Marca Corporativa</h3>
+                        <p data-lang="portfolio_item_2_desc">Tu proyecto, tu imagen</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-category="marca_corporativa">
+                    <img src="assets/gallery/2_serv_marca_corporativa/maniweros.webp" alt="Marca Corporativa" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 data-lang="portfolio_item_2b_title">Marca Corporativa</h3>
+                        <p data-lang="portfolio_item_2b_desc">Profesionalismo</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-category="foto_cv">
+                    <img src="assets/gallery/3_serv_Fotos_CV/ana.webp" alt="Foto CV" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 data-lang="portfolio_item_3_title">Foto CV</h3>
+                        <p data-lang="portfolio_item_3_desc">Tu mejor imagen profesional</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-category="foto_cv">
+                    <img src="assets/gallery/3_serv_Fotos_CV/DSC04810.jpg" alt="Foto CV" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 data-lang="portfolio_item_3b_title">Foto CV</h3>
+                        <p data-lang="portfolio_item_3b_desc">Primera impresión</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-category="foto_producto">
+                    <img src="assets/gallery/4_serv_foto_producto/producto1.webp" alt="Foto Producto" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 data-lang="portfolio_item_4_title">Foto Producto</h3>
+                        <p data-lang="portfolio_item_4_desc">Tu producto destacadas</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-category="foto_producto">
+                    <img src="assets/gallery/4_serv_foto_producto/Equipo Vender Rix-19.webp" alt="Foto Producto" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 data-lang="portfolio_item_4b_title">Foto Producto</h3>
+                        <p data-lang="portfolio_item_4b_desc">Calidad profesional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-lang="services_tag">Lo Que Ofrecemos</span>
+                <h2 data-lang="services_title">Servicios</h2>
+                <p data-lang="services_subtitle">Construimos tu imagen de marca para que puedas dejar tu huella en el mundo.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="assets/gallery/1_serv_marca_personal/3_vanessa_crop.jpg" alt="Construcción de Marca" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-lang="service_1_title">Construcción de Imagen de Marca</h3>
+                        <p data-lang="service_1_desc">Te ayudamos a definir y capturar la esencia de tu marca personal o corporativa.</p>
+                        <ul class="service-features">
+                            <li data-lang="service_1_feat_1">Fotografía profesional</li>
+                            <li data-lang="service_1_feat_2">Asesoría de marca</li>
+                            <li data-lang="service_1_feat_3">Landing page incluida</li>
+                        </ul>
+                        <div class="service-note">
+                            <strong data-lang="service_1_note_title">Para quienes:</strong>
+                            <span data-lang="service_1_note_desc">Emprendedores, artistas, profesionales y pequeños negocios que quieren destacar.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="assets/gallery/3_serv_Fotos_CV/DSC04815_crop.jpg" alt="Fotografía Profesional" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-lang="service_2_title">Fotografía Profesional</h3>
+                        <p data-lang="service_2_desc">Sesiones de estudio o exteriores para capturar tu mejor imagen.</p>
+                        <ul class="service-features">
+                            <li data-lang="service_2_feat_1">Fotos digitales en 4K</li>
+                            <li data-lang="service_2_feat_2">Monitoreo en tiempo real</li>
+                            <li data-lang="service_2_feat_3">Edición profesional</li>
+                        </ul>
+                        <div class="service-note">
+                            <strong data-lang="service_2_note_title">Locaciones:</strong>
+                            <span data-lang="service_2_note_desc">Estudio en Vedado o exteriores en la ubicación que prefieras.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="assets/gallery/5_serv_Alquiler/3_alquiler.jpeg" alt="Alquiler de Estudio" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-lang="service_3_title">Alquiler de Estudio</h3>
+                        <p data-lang="service_3_desc">Equipos y espacio disponible para fotógrafos independientes.</p>
+                        <ul class="service-features">
+                            <li data-lang="service_3_feat_1">Equipos Godox y Sony</li>
+                            <li data-lang="service_3_feat_2">Fondos intercambiables</li>
+                            <li data-lang="service_3_feat_3">Tarifa por hora</li>
+                        </ul>
+                        <div class="service-note">
+                            <strong data-lang="service_3_note_title">Incluye:</strong>
+                            <span data-lang="service_3_note_desc">Wi-Fi, electricidad garantizada y asistencia técnica.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="precios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-lang="pricing_tag">Planes y Precios</span>
+                <h2 data-lang="pricing_title">Nuestras Tarifas</h2>
+                <p data-lang="pricing_subtitle">Contáctanos para personalizar tu paquete.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card featured reveal">
+                    <div class="pricing-header">
+                        <h3 data-lang="pricing_studio_title">Construcción de Imagen de Marca</h3>
+                        <p data-lang="pricing_studio_subtitle">Paquete completo</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li data-lang="pricing_brand_1">Fotografía profesional</li>
+                            <li data-lang="pricing_brand_2">Asesoría de marca</li>
+                            <li data-lang="pricing_brand_3">Landing page básica</li>
+                            <li data-lang="pricing_brand_4">Entrega en 7 días</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3 data-lang="pricing_outdoor_title">Fotografía Profesional</h3>
+                        <p data-lang="pricing_outdoor_subtitle">Sesión de fotos</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li data-lang="pricing_photo_1">Fotos digitales en 4K</li>
+                            <li data-lang="pricing_photo_2">Edición profesional</li>
+                            <li data-lang="pricing_photo_3">Monitoreo en tiempo real</li>
+                            <li data-lang="pricing_photo_4">Entrega en 20 días</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3 data-lang="pricing_rental_title">Alquiler de Estudio</h3>
+                        <p data-lang="pricing_rental_subtitle">Equipos y espacio</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li data-lang="pricing_rental_1">Estudio + Wi-Fi</li>
+                            <li data-lang="pricing_rental_2">Electricidad garantizada</li>
+                            <li data-lang="pricing_rental_3">Asistencia técnica</li>
+                            <li data-lang="pricing_rental_4">Tarifa por hora</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Reviews -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-lang="about_tag">Conócenos</span>
+                <h2 data-lang="about_title">Sobre Demos</h2>
+            </div>
+            <div class="about-wrapper">
+                <div class="about-content reveal-left">
+                    <h3 data-lang="about_subtitle">Demos es el primer estudio de fotografía especializado en construir tu imagen de marca.</h3>
+                    <p data-lang="about_p1">Demos toma su nombre de la palabra griega para "pueblo". También significa "versión incompleta", porque valoramos la construcción colectiva y lo que cada cliente aporta al proceso.</p>
+                    <p data-lang="about_p2">Descubrimos que los cubanos necesitan presentarse como profesionales competentes en un mercado cada vez más dominado por las imágenes. No es necesario tener una empresa para tener una imagen.</p>
+                    <p data-lang="about_p3">Antes de ponerte frente al lente, te preguntamos quién eres, qué deseas transmitir y cómo quieres que el mundo te conoce. Trabajamos para que puedas sentirte orgulloso de decir "este soy yo".</p>
+                </div>
+                <div class="reviews-container reveal-right">
+                    <h3 data-lang="reviews_title">Lo Que Dicen Nuestros Clientes</h3>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text" data-lang="review_1">"Increíble experiencia. Las fotos quedaron espectaculares y el trato fue excelente. Definitivamente volveré."</p>
+                        <p class="review-author">— @vannessa</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text" data-lang="review_2">"Me encantaron asere, impresionante y las fotos... lo máximo."</p>
+                        <p class="review-author">— @maniweros</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text" data-lang="review_3">"Hicimos la sesión de quinceaños de mi hija y fue perfecto. El monitoreo en vivo nos permitió elegir las mejores tomas."</p>
+                        <p class="review-author">— Ana Martínez</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Conditions -->
+    <section class="terms" id="terminos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-lang="terms_tag">Información Legal</span>
+                <h2 data-lang="terms_title">Términos y Condiciones</h2>
+                <p data-lang="terms_subtitle">Lee nuestras políticas para una experiencia transparente y sin sorpresas.</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item reveal">
+                    <div class="accordion-header" role="button" aria-expanded="false" aria-controls="panel-1" id="accordion-1">
+                        <span data-lang="terms_1_title">Reserva y Pagos</span>
+                        <span class="accordion-icon" aria-hidden="true">▼</span>
+                    </div>
+                    <div class="accordion-content" id="panel-1" role="region" aria-labelledby="accordion-1">
+                        <div class="accordion-body" data-lang="terms_1_desc">
+                            Para reservar tu sesión fotográfica, se requiere un depósito de 5 USD que será descontado del total a pagar al final. Este depósito confirma tu cita y garantiza la disponibilidad del estudio en la fecha y hora solicitadas.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <div class="accordion-header" role="button" aria-expanded="false" aria-controls="panel-2" id="accordion-2">
+                        <span data-lang="terms_2_title">Plazo de Entrega</span>
+                        <span class="accordion-icon" aria-hidden="true">▼</span>
+                    </div>
+                    <div class="accordion-content" id="panel-2" role="region" aria-labelledby="accordion-2">
+                        <div class="accordion-body" data-lang="terms_2_desc">
+                            El plazo máximo de entrega de tus fotografías editadas es de 60 días calendario desde la fecha de la sesión. Sin embargo, en la mayoría de los casos entregamos mucho antes. Si necesitas un servicio express, consulta nuestras opciones de entrega rápida con costo adicional.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <div class="accordion-header" role="button" aria-expanded="false" aria-controls="panel-3" id="accordion-3">
+                        <span data-lang="terms_3_title">Política de Cancelación</span>
+                        <span class="accordion-icon" aria-hidden="true">▼</span>
+                    </div>
+                    <div class="accordion-content" id="panel-3" role="region" aria-labelledby="accordion-3">
+                        <div class="accordion-body" data-lang="terms_3_desc">
+                            Si necesitas cancelar o reprogramar tu sesión, debes notificarnos con al menos 4 días de anticipación para proceder con la devolución completa de tu depósito. Cancelaciones con menos de 4 días de anticipación no son reembolsables, aunque puedes reprogramar una sola vez sin costo adicional.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <div class="accordion-header" role="button" aria-expanded="false" aria-controls="panel-4" id="accordion-4">
+                        <span data-lang="terms_4_title">Derechos de Autor</span>
+                        <span class="accordion-icon" aria-hidden="true">▼</span>
+                    </div>
+                    <div class="accordion-content" id="panel-4" role="region" aria-labelledby="accordion-4">
+                        <div class="accordion-body" data-lang="terms_4_desc">
+                            Todos los derechos de autor de las fotografías realizadas pertenecen a Demos Estudio. El cliente recibe licencia de uso personal de las imágenes editadas para redes sociales, impresiones personales y usos no comerciales. Para uso comercial o publicitario, se requiere un acuerdo adicional por escrito.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <div class="accordion-header" role="button" aria-expanded="false" aria-controls="panel-5" id="accordion-5">
+                        <span data-lang="terms_5_title">Uso de Imágenes para Portafolio</span>
+                        <span class="accordion-icon" aria-hidden="true">▼</span>
+                    </div>
+                    <div class="accordion-content" id="panel-5" role="region" aria-labelledby="accordion-5">
+                        <div class="accordion-body" data-lang="terms_5_desc">
+                            Demos Estudio se reserva el derecho de utilizar las fotografías realizadas en nuestro portafolio, sitio web, redes sociales y materiales promocionales, salvo que el cliente solicite expresamente lo contrario por escrito antes de la sesión.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-lang="contact_tag">Contáctanos</span>
+                <h2 data-lang="contact_title">¿Listo Para Tu Sesión?</h2>
+                <p data-lang="contact_subtitle">Escríbenos y reserva tu fecha. podemos ponernos de acuerdo.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3 data-lang="contact_location_title">Ubicación</h3>
+                            <p><a href="https://maps.google.com/?q=23.13990126308201,-82.38115107740893" target="_blank">Calle N / 23 y 25, Apto 12, Edificio 330</a></p>
+                            Vedado, La Habana</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3 data-lang="contact_whatsapp_title">WhatsApp</h3>
+                            <p><a href="https://wa.me/5352002606" target="_blank">(+53) 52-00-2606</a></p>
+                            <p><a href="https://wa.me/5354479465" target="_blank">(+53) 54-47-9465</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📷</div>
+                        <div>
+                            <h3 data-lang="contact_instagram_title">Instagram</h3>
+                            <p><a href="https://instagram.com/demos_estudio" target="_blank">@demos_estudio</a></p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <div id="map" class="map-inner" aria-label="Mapa de ubicación - Vedado, La Habana"></div>
+                        <a href="https://maps.google.com/?q=23.13990126308201,-82.38115107740893" target="_blank" class="map-link" data-lang="contact_map_open">Abrir en Google Maps</a>
+                    </div>
+                </div>
+                <div id="booking" class="booking-form reveal-right">
+                    <h3 data-lang="booking_title">Reserva tu Sesión</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <legend data-lang="booking_desire">¿Qué te interesa?</legend>
+                            <div class="form-options">
+                                <div class="form-option">
+                                    <input type="radio" name="deseo" id="sesion" value="sesion" checked>
+                                    <label for="sesion" data-lang="booking_session">Sesión de fotos</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="deseo" id="alquiler" value="alquiler">
+                                    <label for="alquiler" data-lang="booking_rental">Alquilar el estudio</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group conditional-block active" id="sesionBlock">
+                            <legend data-lang="booking_type">Tipo de Sesión</legend>
+                            <div class="form-options">
+                                <div class="form-option">
+                                    <input type="radio" name="tipo_sesion" id="estudio" value="estudio" checked>
+                                    <label for="estudio" data-lang="booking_studio">Estudio</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="tipo_sesion" id="exterior" value="exterior">
+                                    <label for="exterior" data-lang="booking_outdoor">Exterior</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group conditional-block active" id="cantidadBlock">
+                            <legend data-lang="booking_photos">Cantidad de Fotos</legend>
+                            <div class="form-options">
+                                <div class="form-option">
+                                    <input type="radio" name="cantidad" id="fotos5" value="5">
+                                    <label for="fotos5">5</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="cantidad" id="fotos10" value="10">
+                                    <label for="fotos10">10</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="cantidad" id="fotos15" value="15">
+                                    <label for="fotos15">15</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="cantidad" id="fotos20" value="20">
+                                    <label for="fotos20">20</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="cantidad" id="fotos30" value="más de 20">
+                                    <label for="fotos30" data-lang="booking_more">+20</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group conditional-block" id="tiempoBlock">
+                            <legend data-lang="booking_time">Tiempo</legend>
+                            <div class="form-options">
+                                <div class="form-option">
+                                    <input type="radio" name="tiempo" id="1h" value="1h">
+                                    <label for="1h">1h</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="tiempo" id="2h" value="2h">
+                                    <label for="2h">2h</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="tiempo" id="3h" value="3h">
+                                    <label for="3h">3h</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="tiempo" id="4h" value="4h">
+                                    <label for="4h">4h</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group conditional-block" id="equiposBlock">
+                            <legend data-lang="booking_equipment">Incluir Equipos</legend>
+                            <div class="form-options">
+                                <div class="form-option">
+                                    <input type="radio" name="equipos" id="none" value="No, ninguno" checked>
+                                    <label for="none" data-lang="booking_none">No, ninguno</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="equipos" id="flashes" value="Solo Flashes Godox">
+                                    <label for="flashes" data-lang="booking_flashes">Solo Flashes</label>
+                                </div>
+                                <div class="form-option">
+                                    <input type="radio" name="equipos" id="complete" value="Equipo Completo">
+                                    <label for="complete" data-lang="booking_complete">Completo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary" id="sendWs" style="width: 100%;" data-lang="booking_send">Enviar por WhatsApp</button>
+                            <p class="form-note" data-lang="booking_note">El mensaje se abrirá en WhatsApp con la información seleccionada.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Demos Estudio</div>
+                <div class="footer-links">
+                    <a href="#inicio" data-lang="nav_home">Inicio</a>
+                    <a href="#portafolio" data-lang="nav_portfolio">Portafolio</a>
+                    <a href="#servicios" data-lang="nav_services">Servicios</a>
+                    <a href="#precios" data-lang="nav_pricing">Precios</a>
+                    <a href="#nosotros" data-lang="nav_about">Nosotros</a>
+                    <a href="#contacto" data-lang="nav_contact">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <!--
+                    <a href="https://wa.me/5352002606" class="social-link" target="_blank" title="WhatsApp">📱</a>
+                    -->
+                    <a href="#booking" class="social-link" target="_blank" title="WhatsApp">📱</a>
+                    <a href="https://instagram.com/demos_estudio" class="social-link" target="_blank" title="Instagram">📷</a>
+                    <a href="https://maps.google.com/?q=23.13990126308201,-82.38115107740893" class="social-link" target="_blank" title="Ubicación">📍</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Demos Estudio. Todos los derechos reservados. | La Habana, Cuba</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="#booking" class="whatsapp-float" target="_blank">
+        <img src="assets/icons_wsp/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-float-icon">
+        <span class="whatsapp-float-text" data-lang="whatsapp_text">Reserva ya!</span>
+    </a>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
