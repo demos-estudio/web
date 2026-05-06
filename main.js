@@ -5,7 +5,7 @@ const translations = {
         nav_home: 'Inicio',
         nav_portfolio: 'Portafolio',
         nav_services: 'Servicios',
-        nav_pricing: 'Precios',
+        //nav_pricing: 'Precios',
         nav_about: 'Nosotros',
         nav_contact: 'Contacto',
         
@@ -13,7 +13,7 @@ const translations = {
         hero_badge: 'Estudio de Fotografía en La Habana',
         hero_title: 'En el Mundo, tu <span>Marca</span>',
         hero_subtitle: 'Te ayudamos a construir tu imagen de marca personal o corporativa para que puedas presentarte como el profesional competente que eres.',
-        hero_cta_primary: 'Ver Precios',
+        //hero_cta_primary: 'Ver Precios',
         hero_cta_secondary: 'Reservar Sesión',
         
         // Portfolio
@@ -69,27 +69,27 @@ const translations = {
         service_3_note_desc: 'Wi-Fi, electricidad garantizada y asistencia técnica.',
         
         // Pricing
-        pricing_tag: 'Planes y Precios',
-        pricing_title: 'Nuestras Tarifas',
-        pricing_subtitle: 'Contáctanos para personalizar tu paquete.',
-        pricing_studio_title: 'Construcción de Imagen de Marca',
-        pricing_studio_subtitle: 'Paquete completo',
-        pricing_outdoor_title: 'Fotografía Profesional',
-        pricing_outdoor_subtitle: 'Sesión de fotos',
-        pricing_rental_title: 'Alquiler de Estudio',
-        pricing_rental_subtitle: 'Equipos y espacio',
-        pricing_brand_1: 'Fotografía profesional',
-        pricing_brand_2: 'Asesoría de marca',
-        pricing_brand_3: 'Landing page básica',
-        pricing_brand_4: 'Entrega en 7 días',
-        pricing_photo_1: 'Fotos digitales en 4K',
-        pricing_photo_2: 'Edición profesional',
-        pricing_photo_3: 'Monitoreo en tiempo real',
-        pricing_photo_4: 'Entrega en 20 días',
-        pricing_rental_1: 'Estudio + Wi-Fi',
-        pricing_rental_2: 'Electricidad garantizada',
-        pricing_rental_3: 'Asistencia técnica',
-        pricing_rental_4: 'Tarifa por hora',
+        //pricing_tag: 'Planes y Precios',
+        //pricing_title: 'Nuestras Tarifas',
+        //pricing_subtitle: 'Contáctanos para personalizar tu paquete.',
+        //pricing_studio_title: 'Construcción de Imagen de Marca',
+        //pricing_studio_subtitle: 'Paquete completo',
+        //pricing_outdoor_title: 'Fotografía Profesional',
+        //pricing_outdoor_subtitle: 'Sesión de fotos',
+        //pricing_rental_title: 'Alquiler de Estudio',
+        //pricing_rental_subtitle: 'Equipos y espacio',
+        //pricing_brand_1: 'Fotografía profesional',
+        //pricing_brand_2: 'Asesoría de marca',
+        //pricing_brand_3: 'Landing page básica',
+        //pricing_brand_4: 'Entrega en 7 días',
+        //pricing_photo_1: 'Fotos digitales en 4K',
+        //pricing_photo_2: 'Edición profesional',
+        //pricing_photo_3: 'Monitoreo en tiempo real',
+        //pricing_photo_4: 'Entrega en 20 días',
+        //pricing_rental_1: 'Estudio + Wi-Fi',
+        //pricing_rental_2: 'Electricidad garantizada',
+        //pricing_rental_3: 'Asistencia técnica',
+        //pricing_rental_4: 'Tarifa por hora',
         
         // About
         about_tag: 'Conócenos',
@@ -144,14 +144,14 @@ const translations = {
         booking_note: 'El mensaje se abrirá en WhatsApp con la información seleccionada.',
         
         // WhatsApp
-        whatsapp_text: '¡Reserva ya!'
+        whatsapp_text: '¡Contáctanos!'
     },
     en: {
         // Navigation
         nav_home: 'Home',
         nav_portfolio: 'Portfolio',
         nav_services: 'Services',
-        nav_pricing: 'Pricing',
+        //nav_pricing: 'Pricing',
         nav_about: 'About',
         nav_contact: 'Contact',
         
@@ -215,27 +215,27 @@ const translations = {
         service_3_note_desc: 'Wi-Fi, guaranteed electricity and technical assistance.',
         
         // Pricing
-        pricing_tag: 'Plans & Pricing',
-        pricing_title: 'Our Rates',
-        pricing_subtitle: 'Contact us to customize your package.',
-        pricing_studio_title: 'Brand Image Building',
-        pricing_studio_subtitle: 'Complete package',
-        pricing_outdoor_title: 'Professional Photography',
-        pricing_outdoor_subtitle: 'Photo session',
-        pricing_rental_title: 'Studio Rental',
-        pricing_rental_subtitle: 'Equipment and space',
-        pricing_brand_1: 'Professional photography',
-        pricing_brand_2: 'Brand consulting',
-        pricing_brand_3: 'Basic landing page',
-        pricing_brand_4: 'Delivery in 7 days',
-        pricing_photo_1: '4K digital photos',
-        pricing_photo_2: 'Professional editing',
-        pricing_photo_3: 'Real-time monitoring',
-        pricing_photo_4: 'Delivery in 20 days',
-        pricing_rental_1: 'Studio + Wi-Fi',
-        pricing_rental_2: 'Guaranteed electricity',
-        pricing_rental_3: 'Technical assistance',
-        pricing_rental_4: 'Hourly rate',
+        //pricing_tag: 'Plans & Pricing',
+        //pricing_title: 'Our Rates',
+        //pricing_subtitle: 'Contact us to customize your package.',
+        //pricing_studio_title: 'Brand Image Building',
+        //pricing_studio_subtitle: 'Complete package',
+        //pricing_outdoor_title: 'Professional Photography',
+        //pricing_outdoor_subtitle: 'Photo session',
+        //pricing_rental_title: 'Studio Rental',
+        //pricing_rental_subtitle: 'Equipment and space',
+        //pricing_brand_1: 'Professional photography',
+        //pricing_brand_2: 'Brand consulting',
+        //pricing_brand_3: 'Basic landing page',
+        //pricing_brand_4: 'Delivery in 7 days',
+        //pricing_photo_1: '4K digital photos',
+        //pricing_photo_2: 'Professional editing',
+        //pricing_photo_3: 'Real-time monitoring',
+        //pricing_photo_4: 'Delivery in 20 days',
+        //pricing_rental_1: 'Studio + Wi-Fi',
+        //pricing_rental_2: 'Guaranteed electricity',
+        //pricing_rental_3: 'Technical assistance',
+        //pricing_rental_4: 'Hourly rate',
         
         // About
         about_tag: 'Meet Us',
@@ -290,7 +290,7 @@ const translations = {
         booking_note: 'The message will open in WhatsApp with the selected information.',
         
         // WhatsApp
-        whatsapp_text: 'Book now!'
+        whatsapp_text: 'Contact us!'
     }
 };
 
@@ -374,6 +374,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// WhatsApp Float visibility on booking section (mobile)
+const whatsappFloat = document.querySelector('.whatsapp-float');
+const bookingSection = document.getElementById('booking');
+
+function checkBookingVisibility() {
+    if (!whatsappFloat || !bookingSection) return;
+    const rect = bookingSection.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.5;
+    
+    if (window.innerWidth < 969) {
+        if (isVisible) {
+            whatsappFloat.classList.add('visible-text');
+        } else {
+            whatsappFloat.classList.remove('visible-text');
+        }
+    } else {
+        whatsappFloat.classList.remove('visible-text');
+    }
+}
+
+if (window.location.hash === '#booking') {
+    setTimeout(checkBookingVisibility, 100);
+}
+
+window.addEventListener('scroll', checkBookingVisibility);
+window.addEventListener('resize', checkBookingVisibility);
+
+checkBookingVisibility();
+
 // Accordion Accessibility
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
@@ -381,7 +410,7 @@ document.querySelectorAll('.accordion-header').forEach(header => {
         header.setAttribute('aria-expanded', !expanded);
         const content = header.nextElementSibling;
         if (content) {
-            content.style.display = expanded ? 'none' : 'block';
+            content.classList.toggle('open');
         }
     });
     header.addEventListener('keydown', (e) => {
