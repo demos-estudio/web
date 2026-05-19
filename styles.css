@@ -200,25 +200,27 @@ a {
 .hero-bg {
     position: absolute;
     inset: 0;
-    /*background: linear-gradient(135deg, var(--color-gold) 5%, var(--color-blue) 80%, #1a2a46 100%);
-    */
     background: linear-gradient(135deg, var(--color-gold) -10%, var(--color-blue) 80%, #1a2a46 100%);
     z-index: 1;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
 }
 
 .hero-bg::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('assets/gallery/header.webp') center/cover;
-    opacity: 0.75;
+    background: url('assets/gallery/header/med.webp') center/cover;
+    opacity: 0.80;
     mix-blend-mode: overlay;
+    z-index: 2;
 }
 
 .hero-particles {
     position: absolute;
     inset: 0;
-    z-index: 2;
+    z-index: 1;
     overflow: hidden;
 }
 
@@ -532,10 +534,100 @@ section {
     box-shadow: 0 4px 15px rgba(252, 177, 22, 0.2);
 }
 
+/* Mobile Carousels */
+.portfolio-carousels {
+    display: block;
+}
+
+@media (min-width: 601px) {
+    .portfolio-carousels {
+        display: none;
+    }
+}
+
+.carousel-category {
+    margin-bottom: 2.5rem;
+}
+
+.carousel-category:last-child {
+    margin-bottom: 0;
+}
+
+.carousel-title {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid var(--color-gold);
+}
+
+.carousel-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.5rem 0.5rem 1rem;
+    margin: 0 -0.5rem;
+}
+
+.carousel-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-scroll .portfolio-item {
+    flex: 0 0 65%;
+    scroll-snap-align: start;
+    aspect-ratio: 4/5;
+}
+
+@media (min-width: 480px) {
+    .carousel-scroll .portfolio-item {
+        flex: 0 0 45%;
+    }
+}
+
+/* Desktop/Tablet Masonry Grid */
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
+    display: none;
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 601px) {
+    .portfolio-grid {
+        display: block;
+    }
+    .portfolio-carousels {
+        display: none;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .portfolio-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 901px) {
+    .portfolio-grid {
+        column-count: 3;
+    }
+}
+
+.portfolio-grid .portfolio-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    aspect-ratio: auto;
+    height: auto;
+    min-height: auto;
+}
+
+.portfolio-grid .portfolio-item img {
+    aspect-ratio: auto;
+    height: auto;
 }
 
 .portfolio-item {
@@ -560,6 +652,23 @@ section {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
+}
+
+.progressive-img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background: var(--color-bg-card);
+}
+.progressive-img.loaded,
+.progressive-img[src]:not(.loading) {
+    opacity: 1;
+}
+.progressive-img.loading {
+    opacity: 1;
+}
+
+.progressive-hero.hidden {
+    display: none;
 }
 
 .portfolio-item:hover img {

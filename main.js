@@ -576,3 +576,106 @@ if (mapEl && typeof L !== 'undefined') {
         .bindPopup('Demos Estudio<br>Calle N / 23 y 25, Vedado, La Habana');
 }
 
+// Progressive Image Loading System
+const urlParams = new URLSearchParams(window.location.search);
+const testLowOnly = urlParams.get('test') === 'low';
+
+function getImagePaths(base) {
+    return {
+        low: base + '/low.webp',
+        med: base + '/med.webp',
+        full: base + '/full.webp'
+    };
+}
+
+function loadImageProgressive(img, base, quality) {
+    const paths = getImagePaths(base);
+    const src = quality === 'low' ? paths.low : quality === 'med' ? paths.med : paths.full;
+    img.classList.add('loading');
+    img.src = src;
+    img.onload = () => {
+        img.classList.remove('loading');
+        img.classList.add('loaded');
+    };
+    img.onerror = () => {
+        img.classList.remove('loading');
+        img.classList.add('loaded');
+    };
+}
+
+async function loadAllImagesAtQuality(quality) {
+    const images = document.querySelectorAll('.progressive-img');
+    const promises = Array.from(images).map(img => {
+        return new Promise((resolve) => {
+            const base = img.dataset.base;
+            if (!base) { resolve(); return; }
+            loadImageProgressive(img, base, quality);
+            img.onload = () => resolve();
+            img.onerror = () => resolve();
+        });
+    });
+    await Promise.all(promises);
+}
+
+async function loadHeroProgressive() {
+    const heroImg = document.querySelector('.progressive-hero');
+    if (!heroImg) return;
+    const base = heroImg.dataset.base;
+    const paths = getImagePaths(base);
+    const heroBg = document.querySelector('.hero-bg');
+    
+    await new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => {
+            if (heroBg) heroBg.style.backgroundImage = `url('${paths.low}')`;
+            resolve();
+        };
+        img.onerror = () => resolve();
+        img.src = paths.low;
+    });
+    
+    if (testLowOnly) return;
+    
+    await new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => {
+            if (heroBg) heroBg.style.backgroundImage = `url('${paths.med}')`;
+            resolve();
+        };
+        img.onerror = () => resolve();
+        img.src = paths.med;
+    });
+    
+    await new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => {
+            if (heroBg) heroBg.style.backgroundImage = `url('${paths.full}')`;
+            resolve();
+        };
+        img.onerror = () => resolve();
+        img.src = paths.full;
+    });
+}
+
+async function initProgressiveLoading() {
+    await loadAllImagesAtQuality('low');
+    
+    if (testLowOnly) {
+        document.querySelectorAll('.progressive-img').forEach(img => img.classList.add('loaded'));
+        await loadHeroProgressive();
+        return;
+    }
+    
+    await new Promise(r => setTimeout(r, 300));
+    await loadAllImagesAtQuality('med');
+    await new Promise(r => setTimeout(r, 300));
+    await loadAllImagesAtQuality('full');
+    await loadHeroProgressive();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProgressiveLoading);
+} else {
+    initProgressiveLoading();
+}
+
