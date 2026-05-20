@@ -701,8 +701,9 @@ section {
 }
 
 .portfolio-overlay p {
-    color: var(--color-gray-light);
-    font-size: 0.95rem;
+    color: var(--color-gold);
+    font-size: 1.1rem;
+    font-weight: 500;
     transform: translateY(20px);
     transition: var(--transition);
     transition-delay: 0.1s;
@@ -711,6 +712,46 @@ section {
 .portfolio-item:hover .portfolio-overlay h3,
 .portfolio-item:hover .portfolio-overlay p {
     transform: translateY(0);
+}
+
+/* Mobile carousel - clean overlay */
+@media (max-width: 600px) {
+    .portfolio-carousels .portfolio-overlay {
+        opacity: 0;
+        background: linear-gradient(to top, rgba(10, 15, 26, 0.5) 0%, transparent 90%);
+        padding: 1rem;
+    }
+    
+    .portfolio-carousels .portfolio-overlay p {
+        display: none;
+    }
+
+    .portfolio-carousels .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+    }
+    
+    .portfolio-carousels .portfolio-item:hover .portfolio-overlay p {
+        display: block;
+        transform: translateY(0);
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile carousel labels */
+.carousel-label {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .carousel-label {
+        display: block;
+        font-size: 1rem;
+        color: var(--color-gold);
+        margin-bottom: 0.75rem;
+        padding-left: 0.5rem;
+        border-left: 3px solid var(--color-gold);
+        font-weight: 600;
+    }
 }
 
 /* Services Section */
