@@ -1536,6 +1536,23 @@ footer {
         font-size: 14px;
     }
     
+    .nav-container {
+        padding: 0.8rem 1rem;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .nav-actions {
+        gap: 0.5rem;
+    }
+    
+    .lang-toggle {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
     .hero h1 {
         font-size: 2rem;
     }
