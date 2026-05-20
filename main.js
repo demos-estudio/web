@@ -11,7 +11,7 @@ const translations = {
         
         // Hero
         hero_badge: 'Estudio de Fotografía en La Habana',
-        hero_title: 'En el Mundo, tu <span>Marca</span>',
+        hero_title: 'En el Mundo, <span>tu Marca</span>',
         hero_subtitle: 'Te ayudamos a construir tu imagen de marca personal o corporativa para que puedas presentarte como el profesional competente que eres.',
         //hero_cta_primary: 'Ver Precios',
         hero_cta_secondary: 'Reservar Sesión',
@@ -46,7 +46,7 @@ const translations = {
         services_tag: 'Lo Que Ofrecemos',
         services_title: 'Servicios',
         services_subtitle: 'Construimos tu imagen de marca para que puedas dejar tu huella en el mundo.',
-        service_1_title: 'Construcción de Imagen de Marca',
+        service_1_title: 'Servicio DEMOS',
         service_1_desc: 'Te ayudamos a definir y capturar la esencia de tu marca personal o corporativa.',
         service_1_feat_1: 'Fotografía profesional',
         service_1_feat_2: 'Asesoría de marca',
@@ -110,7 +110,7 @@ const translations = {
         terms_1_title: 'Reserva y Pagos',
         terms_1_desc: 'Para reservar tu sesión fotográfica, se requiere un depósito de 5 USD que será descontado del total a pagar al final. Este depósito confirma tu cita y garantiza la disponibilidad del estudio en la fecha y hora solicitadas.',
         terms_2_title: 'Plazo de Entrega',
-        terms_2_desc: 'El plazo máximo de entrega de tus fotografías editadas es de 30 días calendario desde la fecha de la sesión. Sin embargo, en la mayoría de los casos entregamos mucho antes. Si necesitas un servicio express, consulta nuestras opciones de entrega rápida con costo adicional.',
+        terms_2_desc: 'El plazo máximo de entrega de tus fotografías editadas es de 60 días calendario desde la fecha de la sesión. Sin embargo, en la mayoría de los casos entregamos mucho antes. Si necesitas un servicio express, consulta nuestras opciones de entrega rápida con costo adicional.',
         terms_3_title: 'Política de Cancelación',
         terms_3_desc: 'Si necesitas cancelar o reprogramar tu sesión, debes notificarnos con al menos 4 días de anticipación para proceder con la devolución completa de tu depósito. Cancelaciones con menos de 4 días de anticipación no son reembolsables, aunque puedes reprogramar una sola vez sin costo adicional.',
         terms_4_title: 'Derechos de Autor',
@@ -157,9 +157,9 @@ const translations = {
         
         // Hero
         hero_badge: 'Photography Studio in Havana',
-        hero_title: 'Your <span>Brand</span> in the World',
+        hero_title: 'In the World, <span>your Brand</span>',
         hero_subtitle: 'We help you build your personal or corporate brand image so you can present yourself as the competent professional you are.',
-        hero_cta_primary: 'View Prices',
+        //hero_cta_primary: 'View Prices',
         hero_cta_secondary: 'Book Session',
         
         // Portfolio
@@ -192,7 +192,7 @@ const translations = {
         services_tag: 'What We Offer',
         services_title: 'Services',
         services_subtitle: 'We build your brand image so you can leave your mark on the world.',
-        service_1_title: 'Brand Image Building',
+        service_1_title: 'Demos Service',
         service_1_desc: 'We help you define and capture the essence of your personal or corporate brand.',
         service_1_feat_1: 'Professional photography',
         service_1_feat_2: 'Brand consulting',
@@ -256,7 +256,7 @@ const translations = {
         terms_1_title: 'Booking & Payments',
         terms_1_desc: 'To book your photo session, a deposit of 5 USD is required which will be deducted from the total to pay at the end. This deposit confirms your appointment and guarantees the availability of the studio on the requested date and time.',
         terms_2_title: 'Delivery Time',
-        terms_2_desc: 'The maximum delivery time for your edited photographs is 30 calendar days from the session date. However, in most cases we deliver much earlier. If you need express service, consult our fast delivery options with additional cost.',
+        terms_2_desc: 'The maximum delivery time for your edited photographs is 60 calendar days from the session date. However, in most cases we deliver much earlier. If you need express service, consult our fast delivery options with additional cost.',
         terms_3_title: 'Cancellation Policy',
         terms_3_desc: 'If you need to cancel or reschedule your session, you must notify us at least 4 days in advance to proceed with a full refund of your deposit. Cancellations with less than 4 days notice are non-refundable, although you can reschedule once at no additional cost.',
         terms_4_title: 'Copyright',
